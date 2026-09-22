@@ -1,0 +1,11 @@
+description: Passive buzzer driven by a PWM square wave (UMD Loop E2 System Three)
+
+compatible: "umdloop,pwm-speaker"
+
+include: base.yaml
+
+properties:
+  pwms:
+    type: phandle-array
+    required: true
+    description: PWM channel driving the buzzer

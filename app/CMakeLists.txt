@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.20.0)
+get_filename_component(LOOP_E2_DIR ${CMAKE_CURRENT_SOURCE_DIR}/.. ABSOLUTE)
+list(APPEND ZEPHYR_EXTRA_MODULES ${LOOP_E2_DIR})
+find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
+project(loop_app)
+target_sources(app PRIVATE src/main.c)

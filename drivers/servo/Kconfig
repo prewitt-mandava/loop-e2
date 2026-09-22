@@ -1,0 +1,12 @@
+config SERVO
+	bool "UMD Loop servo driver"
+	default y
+	depends on DT_HAS_UMDLOOP_SERVO_ENABLED
+	select PWM
+	help
+	  Positions a hobby servo using a 50 Hz PWM signal.
+
+config SERVO_INIT_PRIORITY
+	int "Servo init priority"
+	default 80
+	depends on SERVO
